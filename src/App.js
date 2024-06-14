@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import ImageSearchForm from "./components/ImageSearchForm/ImageSearchForm";
+import ImageSearchForm from "./Components/ImageSearchForm/ImageSearchForm.js";
 // import FaceDetect from "./components/FaceDetect/FaceDetect";
 
 class App extends Component {
