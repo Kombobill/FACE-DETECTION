@@ -1,14 +1,16 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import ImageSearchForm from "./components/ImageSearchForm/ImageSearchForm";
+// import FaceDetect from "./components/FaceDetect/FaceDetect";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <ImageSearchForm />
+        {/* <FaceDetect /> */}
+      </div>
+    );
+  }
 }
-
 export default App;
