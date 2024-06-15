@@ -8,7 +8,7 @@ import "./App.css";
 
 // You need to add your own API key here from Clarifai.
 const app = new Clarifai.App({
-  apiKey: "ADD YOUR API KEY HERE",
+  apiKey: "6b491abfa9aa4ae896ab9c0c45eb3b58",
 });
 
 class App extends Component {
@@ -21,14 +21,14 @@ class App extends Component {
     };
   }
 
-// setState for our input with onInputChange function
+  // setState for our input with onInputChange function
   onInputChange = (event) => {
     this.setState({ input: event.target.value });
   };
 
-// Perform a function when submitting with onSubmit
+  // Perform a function when submitting with onSubmit
   onSubmit = () => {
-        // set imageUrl state
+    // set imageUrl state
     this.setState({ imageUrl: this.state.input });
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input).then(
       function (response) {
@@ -46,18 +46,20 @@ class App extends Component {
       }
     );
   };
+
   render() {
     return (
       <div className="App">
-        // update your component with their state
+        {/* update your component with their state */}
         <ImageSearchForm
           onInputChange={this.onInputChange}
           onSubmit={this.onSubmit}
         />
-        // uncomment your face detect app and update with imageUrl state
+        {/* uncomment your face detect app and update with imageUrl state */}
         <FaceDetect imageUrl={this.state.imageUrl} />
       </div>
     );
   }
 }
+
 export default App;
