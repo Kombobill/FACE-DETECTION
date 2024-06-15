@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Clarifai from "clarifai";
-import ImageSearchForm from "./components/ImageSearchForm/ImageSearchForm";
-import FaceDetect from "./components/FaceDetect/FaceDetect";
+import ImageSearchForm from "./Components/ImageSearchForm/ImageSearchForm";
+import FaceDetect from "./Components/FaceDetect/FaceDetect";
 import "./App.css";
 
 // You need to add your own API key here from Clarifai.
